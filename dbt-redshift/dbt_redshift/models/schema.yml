@@ -1,0 +1,90 @@
+version: 2
+
+models:
+  - name: reddit_base
+    description: Base Reddit Data
+    columns:
+      - name: id
+        description: Reddit ID of Post
+        tests:
+          - not_null
+      - name: title
+        description: Title of Reddit Post
+      - name: text
+        description: Body Text of Reddit Post
+      - name: score
+        description: Score of Reddit Post
+      - name: comments
+        description: Number of Comments for Post
+      - name: url
+        description: Full URL of Reddit Post
+      - name: comment
+        description: Top comment for Reddit Post
+      - name: dateposted
+        description: Date Reddit Data was Downloaded
+
+  # top_authors
+  - name: top_authors  
+    description: "Summarizes Reddit data by calculating total scores, total comments, and average upvote ratio for each post title."
+    columns:
+      - name: author
+        description: "The author of the Reddit post."
+        tests:
+          - not_null
+          - unique
+
+      - name: total_score
+        description: "The total score of all Reddit posts with the same title."
+        tests:
+          - not_null
+
+      - name: total_comments
+        description: "The total number of comments across all Reddit posts with the same title."
+        tests:
+          - not_null
+
+      - name: avg_upvote_ratio
+        description: "The average upvote ratio of all Reddit posts with the same title."
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0.0, 1.0]
+
+      - name: total_articles
+        description: "Total articles"
+
+
+
+ # top_articles
+  - name: top_articles  
+    description: "Summarizes Reddit data by calculating total scores, total comments, and average upvote ratio for each post title."
+    columns:
+      - name: title
+        description: "The title of the Reddit post."
+        tests:
+          - not_null
+          - unique
+
+      - name: url
+        description: "The url of the Reddit post."
+
+      - name: author
+        description: "The author of the Reddit post."
+
+      - name: total_score
+        description: "The total score of all Reddit posts with the same title."
+        tests:
+          - not_null
+
+      - name: total_comments
+        description: "The total number of comments across all Reddit posts with the same title."
+        tests:
+          - not_null
+
+      - name: avg_upvote_ratio
+        description: "The average upvote ratio of all Reddit posts with the same title."
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0.0, 1.0]
+    

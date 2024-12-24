@@ -1,0 +1,47 @@
+[0m16:59:50.995633 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1045aca10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10606dac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10606d7c0>]}
+
+
+============================== 16:59:50.997868 | 7871942f-c7a3-4569-b86f-63614bbaab51 ==============================
+[0m16:59:50.997868 [info ] [MainThread]: Running with dbt=1.9.1
+[0m16:59:50.998139 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/dinesh/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:00:23.753945 [debug] [MainThread]: Starter project path: /Users/dinesh/1Tech/dbt-env/lib/python3.12/site-packages/dbt/include/starter_project
+[0m17:00:23.759851 [info ] [MainThread]: 
+Your new dbt project "dbt_redshift" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:00:23.760171 [info ] [MainThread]: Setting up your profile.
+[0m17:00:31.049351 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m17:00:31.049671 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m17:01:32.597254 [info ] [MainThread]: Profile dbt_redshift written to /Users/dinesh/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m17:01:32.611760 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 101.67177, "process_in_blocks": "0", "process_kernel_time": 0.141252, "process_mem_max_rss": "97239040", "process_out_blocks": "0", "process_user_time": 0.595777}
+[0m17:01:32.612693 [debug] [MainThread]: Command `dbt init` succeeded at 17:01:32.612343 after 101.67 seconds
+[0m17:01:32.613329 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10606d910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10610b080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1067bb2f0>]}
+[0m17:01:32.613727 [debug] [MainThread]: Flushing usage events
+[0m17:01:39.221287 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:07:17.732886 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119465fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ad71f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ad71c70>]}
+
+
+============================== 17:07:17.735729 | 1e2c6bc2-68cb-4377-83d0-6c022e1f2b94 ==============================
+[0m17:07:17.735729 [info ] [MainThread]: Running with dbt=1.9.1
+[0m17:07:17.736018 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/Users/dinesh/.dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt build', 'send_anonymous_usage_stats': 'True'}
+[0m17:07:17.736277 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/dinesh/github/Reddit-API-Pipeline/dbt-redshift/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m17:07:17.737534 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": false, "command_wall_clock_time": 0.058969665, "process_in_blocks": "0", "process_kernel_time": 0.104316, "process_mem_max_rss": "96714752", "process_out_blocks": "0", "process_user_time": 0.523555}
+[0m17:07:17.737802 [debug] [MainThread]: Command `dbt build` failed at 17:07:17.737758 after 0.06 seconds
+[0m17:07:17.737962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119465fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ac0f6e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x118c2c440>]}
+[0m17:07:17.738106 [debug] [MainThread]: Flushing usage events

@@ -2,6 +2,7 @@ venv/
 extraction/secrets/
 notes/
 airflow/extraction/*.csv
+airflow/extraction/*.conf
 airflow/dags/__pycache__
 airflow/plugins/*
 airflow/logs/*
@@ -15,3 +16,4 @@ terraform/*
 .DS_Store
 __pycache__
 airflow/redshift_download
+terraform/variable.tf
